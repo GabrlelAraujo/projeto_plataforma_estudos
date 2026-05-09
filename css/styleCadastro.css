@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial;
+
+    background-image: url("/imagens/imagem.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CENTRALIZA TUDO */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CARD */
+.card {
+    background: #eee;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* BOTÕES */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons button {
+    width: 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
