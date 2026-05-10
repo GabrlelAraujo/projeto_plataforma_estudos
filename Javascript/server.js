@@ -97,6 +97,7 @@ app.post("/login", (req, res) => {
                 const token = jwt.sign(         // jwt.sign isso cria o token 
                     {
                         id: usuario.id,           // sao os dados que sao guardados no token
+                        nome : usuario.nome,
                         email: usuario.email
                     },
 
@@ -127,33 +128,32 @@ app.post("/login", (req, res) => {
 
 
 // home
-app.post( "/home", (req, res) => {
+app.get( "/home", (req, res) => {
 
     const token = req.headers.authorization // pega o token enviado
 
     if (!token) { // a ! inverte o valor pra de false para true e de true para false, na pratica se o usuario nao escrever nada o valor vai virar falso e vai exibir a resposta de baixo
-        return res.send("Token não encontrado")
+        return res.json({
+            mensagem : "Token não encontrado"
+        })
     }
 
-    try {                              //verifica se o token é valido e se foi criado pelo navegador e se expirou 
+    try {                              //verifica se o token é valido,  se foi criado pelo servidor e se expirou 
         const decoded = jwt.verify(    // decoded são os dados do token.
             token,
             process.env.JWT_SECRET
         )
 
-        res.send("Acesso liberado")
+        res.json({
+            mensagem : "Acesso liberado",
+            usuario : decoded
+        })
 
     } catch (erro) {                    //catch sempore acompanha o try para caso de erro
-        res.send("Token invalido")
+        res.json("Token invalido")
     }
 
 })
-
-
-
-
-
-
 
 
 
