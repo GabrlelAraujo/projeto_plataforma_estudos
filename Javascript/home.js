@@ -51,7 +51,7 @@ fetch("http://localhost:3000/home", {
         window.location.href = "login.html"
     } else {
         // mensagem de bem vindo
-        document.getElementById("mensagem").innerText = "Bem vindo " + data.usuario.nome //getElementByID pega o id no html,  
+        document.getElementById("mensagem").innerText = "Bem vindo(a) " + data.usuario.nome + "!"//getElementByID pega o id no html,  
     }        // innerText troxa mensagem para oq vem do back
     
 })

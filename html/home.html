@@ -1,20 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma</title>
+
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    
-    <h1>Bem vindo a plataforma</h1>
 
-    <h1 id="mensagem"></h1>
+    <header class="topo">
+
+        <div class="perfil">
+            <img src="/img/perfil.png" alt="">
+        </div>
+
+        <nav class="menu">
+            <a href="#" onclick="irMatematica()" class="matematica">Matematica</a>
+            <a href="#" onclick="irPortugues()" class="portugues">Portugues</a>
+            <a href="#" onclick="irGeografia()" class="geografia">Geografia</a>
+            <a href="#" onclick="irHistoria()" class="historia">Historia</a>
+            <a href="#" onclick="irFisica()" class="fisica">Fisica</a>
+            <a href="#" onclick="irQuimica()" class="quimica">Quimica</a>
+        </nav>
+
+    </header>
 
 
-    <button onclick="sair()">Sair</button>
+    <section class="banner">
+
+        <div class="texto-banner">
+            <h1 id="mensagem"></h1>
+
+            <p>
+                Continue seus estudos
+                <br>
+                e alcance seus objetivos
+            </p>
+        </div>
+
+        <div class="imagem-banner">
+            <img src="/imagens/Copilot_20260511_200945.png" alt="">
+        </div>
+
+    </section>
+
+
+    <section class="progresso">
+
+        <h2>Seu progresso</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icone azul">
+                    🕒
+                </div>
+
+                <div class="info">
+                    <span>Horas de estudos</span>
+                    <h3>12h 30m</h3>
+                    <p>Esta semana</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone verde">
+                    ✔
+                </div>
+
+                <div class="info">
+                    <span>Exercícios resolvidos</span>
+                    <h3>47</h3>
+                    <p>Esta semana</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone rosa">
+                    🎯
+                </div>
+
+                <div class="info">
+                    <span>Sequência atual</span>
+                    <h3>5 dias</h3>
+                    <p>Mantenha o ritmo!</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone amarelo">
+                    🏆
+                </div>
+
+                <div class="info">
+                    <span>Matérias concluídas</span>
+                    <h3>2</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <script src="/Javascript/home.js"></script>
+    <script src="/Javascript/script.js"></script>
 
 </body>
 </html>
